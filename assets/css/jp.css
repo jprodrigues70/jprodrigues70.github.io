@@ -12,6 +12,10 @@ body {
   filter: brightness(1000%);
 }
 
+.gt-top-menu li:hover:not(.btn):not(.action):not(.tag), .gt-top-menu li.active:not(.btn):not(.action):not(.tag), .menu li:hover:not(.btn):not(.action):not(.tag), .menu li.active:not(.btn):not(.action):not(.tag) {
+  border-color: #9d42b4;
+}
+
 #home {
   height: 100%;
   max-height: 600px;
