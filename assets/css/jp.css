@@ -20,6 +20,10 @@ body {
   border-color: #9d42b4;
 }
 
+.gt-top-menu.transparent li:hover:not(.btn):not(.action):not(.tag), .gt-top-menu.transparent li.active:not(.btn):not(.action):not(.tag){
+  border-color: #FFF;
+}
+
 #home {
   height: 100%;
   max-height: 600px;
