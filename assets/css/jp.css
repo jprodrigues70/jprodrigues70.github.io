@@ -9,6 +9,10 @@ body {
 .gt-top-menu.transparent * {
   color: #FFF;
   border-color: #FFF;
+  fill: #FFF;
+}
+
+.gt-top-menu.transparent img {
   filter: brightness(1000%);
 }
 
@@ -19,12 +23,6 @@ body {
 #home {
   height: 100%;
   max-height: 600px;
-}
-
-@media (max-width: 768px) {
-  #home {
-    padding-top: 70px;
-  }
 }
 
 .fist {
@@ -154,7 +152,6 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position-x: 5%;
-  /* filter: grayscale(55%); */
 }
 
 #home .content {
@@ -167,4 +164,13 @@ body {
 .transparent {
   background-color: transparent;
   box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 90px;
+  }
+  .gt-top-menu.transparent nav * {
+    color: #333 !important;
+  }
 }
