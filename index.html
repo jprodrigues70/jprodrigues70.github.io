@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/jp.css">
   </head>
   <body>
-    <header class="gt-top-menu xs-left no-shadow fixed">
+    <header id="menu" class="gt-top-menu xs-left fixed transparent">
       <img src="assets/img/jp.svg" alt="Logo da página do JP Rodrigues" />
       <label class="menu-toggle">
         <svg viewBox="0 0 24 24">
@@ -24,15 +24,15 @@
         </ul>
       </nav>
     </header>
-    <section id="home" class="flex-box">
+    <section id="home" class="flex-box bg">
       <div class="centerex center medium">
-        <div class="">
+        <div class="content">
           <h1>Apesar de já começado, há sempre um mundo pra a gente fazer. Um mundo não acabado, um mundo filho nosso, com a nossa cara.</h1>
           <p>O mundo que eu disponho agora foi criado por mim. Euzin, pobre curumim, rico, franzino e risonho.<br><b>Sou milionário do sonho.</b> - Emicida</p>
         </div>
       </div>
     </section>
-    <div class="line small center"></div>
+    <!-- <div class="line small center"></div> -->
     <section class="grey">
       <main class="medium center flex-box reverse">
         <div class="col">
@@ -61,7 +61,7 @@
           <h3>Mídias sociais</h3>
           <ul class="social">
             <li><a title="Sair para o Facebook de JP Rodrigues" target="_blank" href="https://www.facebook.com/jprodrigues70">Facebook</a></li>
-            <li><a title="Sair para o Instagram de JP Rodrigues" target="_blank" href="https://www.instagram.com/_jprodrigues70">Instagram</a></li>
+            <li><a title="Sair para o Instagram de JP Rodrigues" target="_blank" href="https://www.instagram.com/jprodrigues70_">Instagram</a></li>
             <li><a title="Sair para o LinkedIn de JP Rodrigues" target="_blank" href="https://www.linkedin.com/in/jprodrigues70/">LinkedIn</a></li>
           </ul>
         </div>
@@ -78,5 +78,22 @@
       </div>
     </footer>
     <script type="text/javascript" src="nm/gaintime/js/gaintime.min.js"></script>
+    <script type="text/javascript">
+      var header = document.getElementById('menu');
+
+      var el = document.scrollingElement || document.documentElement;
+      if (el.scrollTop >= 5) {
+          header.setAttribute("class", "gt-top-menu xs-left fixed")
+      }
+      document.addEventListener("scroll", function() {
+          if (el.scrollTop >= 5) {
+            header.classList.remove("transparent")
+            header.classList.add("white-bg")
+          } else {
+            header.classList.add("transparent")
+            header.classList.remove("white-bg")
+          }
+      });
+    </script>
   </body>
 </html>
