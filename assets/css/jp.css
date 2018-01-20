@@ -1,9 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css?family=Muli'); */
-
 body {
   background-color: #FFF;
-  /* font-family: 'Muli', sans-serif;
-  font-size: 16px; */
 }
 
 .gt-top-menu {
@@ -33,14 +29,9 @@ body {
 
 .me {
   width: 200px;
-  /* filter: grayscale(100%); */
   border-radius: 30px;
   border-right: 2px solid #9d42b4;
   transition: all 0.2s;
-}
-
-.me:hover {
-  filter: none;
 }
 
 .flex-box.reverse {
@@ -54,9 +45,33 @@ body {
   margin: 5px auto;
 }
 
+.line.white {
+  background-color: #FFF;
+}
+
 .grey {
   background-color: #f2f2f2;
   position: relative;
+}
+
+.grey::after {
+  background: #f2f2f2;
+  top: 15px;
+  content: "";
+  height: 40px;
+  position: absolute;
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+  -webkit-transition: all .5s ease;
+  -o-transition: ease all .5s;
+  transition: all .5s ease;
+  width: 100%;
+  z-index: 2;
+  left: 0;
 }
 
 .social {
@@ -148,24 +163,4 @@ body {
 .transparent {
   background-color: transparent;
   box-shadow: none;
-}
-
-.grey::after {
-  background: #f2f2f2;
-  top: 15px;
-  content: "";
-  height: 40px;
-  position: absolute;
-  -webkit-transform-origin: left bottom;
-  -ms-transform-origin: left bottom;
-  transform-origin: left bottom;
-  -webkit-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  transform: skewY(-2deg);
-  -webkit-transition: all .5s ease;
-  -o-transition: ease all .5s;
-  transition: all .5s ease;
-  width: 100%;
-  z-index: 2;
-  left: 0;
 }
